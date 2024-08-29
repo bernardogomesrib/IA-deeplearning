@@ -103,3 +103,18 @@ if train_generator is not None and validation_generator is not None:
         print("Error: The generators do not have any data.")
 else:
     print("Error: One of the generators is None.")
+
+
+    import matplotlib.pyplot as plt
+acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs = range(len(acc))
+
+plt.plot(epochs, val_acc, 'r', label='val_accuracy')
+plt.plot(epochs, acc, 'b', label='val_loss')
+plt.title('Training and validation accuracy')
+plt.legend(loc=0)
+plt.show()
