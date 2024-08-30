@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Data no formato ISO
+            let dataISO = "2024-12-31";
+
+            // Converter para objeto Date
+            let data = new Date(dataISO);
+
+            // Formatar a data para o formato local desejado
+            let dataFormatada = new Intl.DateTimeFormat('pt-BR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+            }).format(data);
+
+            console.log(dataFormatada); // Saída: 31/12/2024
+
+    </script>
+</body>
+</html>
